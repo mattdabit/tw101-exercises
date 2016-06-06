@@ -6,6 +6,22 @@ package com.thoughtworks.tw101.exercises.exercise8;
 
 public class Main {
     public static void main(String[] args) {
-
+        int guess;
+        boolean win;
+        Game game = new Game();
+        game.setRandInt(1, 100);
+        Player player = new Player();
+        System.out.println("Time to play a game.");
+        System.out.println("Guess a number between 1 and 100.");
+        System.out.println("I will tell you if you guessed too high or too low.");
+        while (true){
+            guess = player.getGuess();
+            win = game.isGuessCorrect(guess);
+            if (win){
+                System.out.println("Here is a list of all your guesses:");
+                System.out.println(player.guesses);
+                System.exit(1);
+            }
+        }
     }
 }

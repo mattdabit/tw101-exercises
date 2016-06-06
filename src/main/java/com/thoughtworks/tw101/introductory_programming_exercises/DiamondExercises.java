@@ -13,7 +13,16 @@ public class DiamondExercises {
 //             ***
 //            *****
     private static void drawAnIsoscelesTriangle(int n) {
-
+        n += 2;
+        for (int i = 1; i <= n; i+=2) {
+            for (int j = 0; j < n - i / 2; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 
 //    Diamond
@@ -24,7 +33,37 @@ public class DiamondExercises {
 //             ***
 //              *
     private static void drawADiamond(int n) {
-
+        n +=2;
+        if(n%2==0) {
+            for (int i = 0; i <= n; i += 2) {
+                for (int j = 0; j < n - i / 2; j++) {
+                    System.out.print(" ");
+                }
+                for (int j = 0; j < i; j++) {
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
+        }else {
+            for (int i = 1; i <= n; i += 2) {
+                for (int j = 0; j < n - i / 2; j++) {
+                    System.out.print(" ");
+                }
+                for (int j = 0; j < i; j++) {
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
+        }
+        for (int i = n-2; i >= 1; i-=2) {
+            for (int j = 0; j < n - i / 2; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 
 //    Diamond with Name
@@ -36,6 +75,40 @@ public class DiamondExercises {
 //            ***
 //             *
     private static void drawADiamondWithYourName(int n) {
-
+        n +=2;
+        if(n%2==0) {
+            for (int i = 0; i < n; i += 2) {
+                for (int j = 0; j < n - i / 2; j++) {
+                    System.out.print(" ");
+                }
+                for (int j = 0; j < i; j++) {
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
+        }else {
+            for (int i = 1; i < n; i += 2) {
+                for (int j = 0; j < n - i / 2; j++) {
+                    System.out.print(" ");
+                }
+                for (int j = 0; j < i; j++) {
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
+        }
+        for (int i = 1; i <= n-2; i++){
+            System.out.print(" ");
+        }
+        System.out.println("Matt");
+        for (int i = n-2; i >= 1; i-=2) {
+            for (int j = 0; j < n - i / 2; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 }
